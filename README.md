@@ -5,8 +5,11 @@ DUE March 30, 2015 Monday (2015-03-30)
 
 ### Narrative
 Since I worked with the webserver library last and can make webpages and in turn possibly an API, it would be a good idea to be able to generate and read data in JSON. I first looked at the JSON library and tried creating a simple element as a JSON string and once I saw how it worked I moved on to structures.
+
 I created a simple structure that would describe a user and using the JSON library I created a structure to jsexpr generating procedure. Once this was done I was able to output the JSON of the structure to the screen. I then thought to extend this by making a procedure that would apply this to a list of structures. Having the JSON display to the terminal was fine but, I wanted to output it to a file. Doing this taught me how to open output files and close them in the process.
+
 At this point I had gotten data from Racket to a JSON file that could be used by other services. I then implemented the reverse to be able to read JSON, in turn learning how to read from files and displaying the output. I noticed that the output differed from the original input, returning jsexpr rather than the list of structures and worked on created a backwards conversion to get the original data, learning how to use hash-values to convert back.
+
 Once it all worked I then wrote a function that would convert list of hashes back to the original format of lists of structures. I then generalized this function to be able to work for any structure. This gave me some trouble as eval requires a namespace and I didnt realize it, the article on [www.stackoverflow.com][stack] helped me figure it out. Now I can create JSON from a list of structures and vice versa. This gives me a head start in being able to create a Racket web API.
 
 ### Source Code
